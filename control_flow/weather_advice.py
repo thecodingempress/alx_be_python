@@ -1,4 +1,4 @@
-weather = [sunny, rainy, cold]
+weather = ["sunny", "rainy", "cold"]
 
 weatherToday = input("What's the weather like today? (sunny/rainy/cold): ").strip().lower()
 
