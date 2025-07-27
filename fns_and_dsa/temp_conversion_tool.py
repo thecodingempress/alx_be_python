@@ -11,7 +11,11 @@ def convert_to_fahrenheit(celsius):
     return (celsius * CELSIUS_TO_FAHRENHEIT_FACTOR) + 32
 
 
-userinput = input("Enter the temperature to convert:").strip()
+userinput = input("Enter the temperature to convert:")
+
+if not userinput.replace('.', '', 1).isdigit():
+    print("Invalid temperature. Please enter a numeric value.")
+    exit()
 degree = input("Is this temperature in Celsius or Fahrenheit? (C/F):").strip().upper()
 
 if degree == 'C':
