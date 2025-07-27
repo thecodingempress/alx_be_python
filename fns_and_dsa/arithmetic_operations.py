@@ -11,6 +11,8 @@ def perform_operation(num1, num2, operation):
         case 'divide':
             if num2 == 0:
                 raise ValueError("Cannot divide by zero.")
+            elif num1 == 0:
+                return 0
             return num1 / num2
         case _:
             raise ValueError("Invalid operation. Supported operations: add, subtract, multiply, divide.")
