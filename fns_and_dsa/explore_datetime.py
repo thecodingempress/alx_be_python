@@ -1,0 +1,19 @@
+import datetime
+
+
+def display_current_daytime():
+    current_date = datetime.datetime.now()
+    formatted_date = current_date.strftime("%Y-%m-%d %H:%M:%S")
+    print("Current Date and Time:", formatted_date)
+
+def calculate_future_date(days):
+    days = int(input("Enter the number of days to add to the current date:"))
+    
+    today = datetime.datetime.now()
+    future_date = today + datetime.timedelta(days=days)
+    print("Future Date:", future_date.strftime("%Y-%m-%d %H:%M:%S"))
+
+
+display_current_daytime()
+calculate_future_date(0)  # Placeholder to call the function
+# This is a placeholder to call the function, as the function expects user input.
