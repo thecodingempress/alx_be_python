@@ -8,21 +8,16 @@ class TestSimpleCalculator(unittest.TestCase):
         self.calculator = SimpleCalculator()
 
     def test_addition(self):
-        result = self.calculator.add(3, 5)
-        self.assertEqual(result, 8)
+        self.assertEqual(self.calculator.add(3, 5), 8)
 
     def test_subtraction(self):
-        result = self.calculator.subtract(10, 4)
-        self.assertEqual(result, 6)
+        self.assertEqual(self.calculator.subtract(10, 4), 6)
 
-    def test_multiply(self):
-        result = self.calculator.multiply(2, 3)
-        self.assertEqual(result, 6)
+    def test_multiplication(self):
+        self.assertEqual(self.calculator.multiply(2, 3), 6)
 
-    def test_divide(self):
-        result = self.calculator.divide(8, 2)
-        self.assertEqual(result, 4)
+    def test_division(self):
+        self.assertEqual(self.calculator.divide(8, 2), 4)
 
     def test_divide_by_zero(self):
-        result = self.calculator.divide(5, 0)
-        self.assertIsNone(result)
+        self.assertIsNone(self.calculator.divide(5, 0))
